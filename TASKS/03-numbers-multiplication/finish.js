@@ -7,3 +7,10 @@
  *
  * 3. Выведите значение последней переменной в консоль
  */
+
+const firstNub = 123;
+const secondNub = 456;
+
+const result = firstNub * secondNub;
+
+console.log(result);

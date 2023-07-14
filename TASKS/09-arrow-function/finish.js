@@ -10,3 +10,13 @@
  *
  * 5. Перепишите функцию так, чтобы результат возвращался неявно
  */
+
+const message = () => {
+    return "hello world";
+};
+
+message();
+
+const anotherMessage = () => "another message";
+
+anotherMessage();

@@ -12,3 +12,14 @@
  *
  * 4. Вызовите функцию
  */
+
+/* Возвращает 
+ разницу
+ двух
+ чисел */
+
+const difference = (firstN = typeof Number, secondN) => {
+    return firstN - secondN;
+};
+
+console.log(difference(12, 1));

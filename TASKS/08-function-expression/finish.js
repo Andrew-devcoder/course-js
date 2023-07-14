@@ -10,3 +10,12 @@
  *
  * 5. Результат вызовов функции выведите в консоль
  */
+
+const hello = (name) => console.log("Hello " + name);
+
+hello("Andrew");
+hello("anonymous");
+
+const hello2 = (name) => {
+    retorn`Hello, ${name}`;
+};

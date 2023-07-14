@@ -8,3 +8,9 @@
  *
  * 4. Вызовите функцию
  */
+
+function printName() {
+    console.log("Andrew");
+}
+
+printName();
