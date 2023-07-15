@@ -9,6 +9,6 @@ const message = () => {
     console.log("Hello world!!!");
 };
 
-setTimeout(() => console.log("Hello world!"), 5000);
-
 setTimeout(message, 6000);
+
+setTimeout(() => console.log("Hello world!"), 5000);
