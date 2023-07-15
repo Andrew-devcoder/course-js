@@ -12,3 +12,13 @@
  *
  * 5. Выведите в консоль значение второй переменной
  */
+
+const str =
+    "My name is <name> <surname> and my favorite number is <favoriteNumber>";
+
+console.log(str instanceof String);
+console.log(typeof str);
+
+const strUpper = str.toUpperCase();
+
+console.log(strUpper);
