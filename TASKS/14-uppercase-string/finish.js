@@ -22,3 +22,13 @@ console.log(typeof str);
 const strUpper = str.toUpperCase();
 
 console.log(strUpper);
+
+// создание экземпляра
+const myStr = new String("My name is anonymous");
+console.log(myStr);
+console.log(myStr instanceof String);
+console.log(typeof myStr);
+console.log(myStr.toUpperCase());
+
+const extractedText = myStr.valueOf();
+console.log(extractedText);
