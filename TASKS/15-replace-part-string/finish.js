@@ -68,3 +68,16 @@ const name = "Bob";
 const upgradeNewMessage = changeWord(newMassege, 1, name + "!");
 console.log(upgradeNewMessage.toUpperCase());
 console.log(upgradeNewMessage);
+
+const changeWordSimple = (variableString, oldWord, newWord) => {
+    result = variableString.replace(oldWord, newWord);
+    return result;
+};
+
+const upMassege = changeWordSimple(newMassege, "Hello,", "Goodbye");
+console.log(upMassege);
+
+const newWord = "ebatsavsratsa";
+
+const upMassege2 = changeWordSimple(newMassege, "Hello,", newWord);
+console.log(upMassege2);
