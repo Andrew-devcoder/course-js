@@ -11,11 +11,19 @@
  * 5. Результат вызовов функции выведите в консоль
  */
 
-const hello = (name) => console.log("Hello " + name);
+const hello = (name) => console.log("Hello, " + name);
 
 hello("Andrew");
 hello("anonymous");
 
 const hello2 = (name) => {
-    retorn`Hello, ${name}`;
+    return `Hello, ${name}`;
 };
+
+console.log(hello2("Andrii"));
+
+const hello3 = function (name) {
+    return "Hello, " + name;
+};
+
+console.log(hello3("Andy"));

@@ -13,13 +13,18 @@
  * 4. Вызовите функцию
  */
 
-/* Возвращает 
- разницу
- двух
- чисел */
-
-const difference = (firstN = typeof Number, secondN) => {
+/**
+ * Возвращает разницу двух чисел
+ * @param {number} firstN
+ * @param {number} secondN
+ * @returns {number} Разница чисел
+ */
+const difference = (firstN, secondN) => {
     return firstN - secondN;
 };
 
 console.log(difference(12, 1));
+
+const result = difference(100, 1);
+
+console.log(result);

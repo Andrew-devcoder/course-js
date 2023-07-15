@@ -14,9 +14,9 @@
 const message = () => {
     return "hello world";
 };
-
-message();
+// message() without console.log we can use only browser
+console.log(message());
 
 const anotherMessage = () => "another message";
 
-anotherMessage();
+console.log(anotherMessage());
