@@ -6,3 +6,9 @@
  *
  * 3. Выведите в консоль длину массива
  */
+
+const arr = ["str", 123, true];
+
+console.log(arr[0]);
+
+console.log(arr.length);
