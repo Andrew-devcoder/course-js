@@ -8,3 +8,11 @@
  *
  * 4. Выведите в консоль измененный массив
  */
+
+const arr = ["str", 123, true];
+
+console.log(arr);
+
+arr[1] = 321;
+
+console.log(arr);
