@@ -4,3 +4,13 @@
  *
  * 2. Выведите значение в консоль
  */
+
+const timeNow = new Date();
+
+console.log(timeNow);
+
+const millisecondsNow = Date.now();
+
+console.log(millisecondsNow);
+
+console.log(Math.PI);
