@@ -12,3 +12,15 @@
  * "Сообщение номер 4"
  * "Сообщение номер 5"
  */
+
+const message = () => {
+    const text = "Сообщение номер";
+
+    for (let i = 1; i <= 5; i++) {
+        setTimeout(function () {
+            console.log(text + " " + i);
+        }, 2000 * i);
+    }
+};
+
+message();
