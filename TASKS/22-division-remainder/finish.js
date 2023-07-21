@@ -12,8 +12,12 @@ const myNumber1 = 10; // 10 = 3 + 3 + 3 + 1
 const myNumber2 = 3;
 
 const remainder = (firstN, secondN) => {
-    const result = firstN - secondN;
-    console.log(result);
+    do {
+        firstN = firstN - secondN;
+    } while (firstN > secondN);
+    console.log(firstN);
 };
 
 remainder(myNumber1, myNumber2);
+
+remainder(12, 5);
