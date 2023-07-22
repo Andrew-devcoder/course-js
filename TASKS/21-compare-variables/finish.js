@@ -6,15 +6,16 @@
  * 2. Преобразуйте обе переменные в числа перед сравнением.
  */
 
-const toNumber = () => {
-    let number = Number(this);
-    return number;
+const compare = (firtsN, secondN) => {
+    if (parseInt(firtsN) <= parseInt(secondN)) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
 };
 
-const compare = (firtsN, secondN) => {
-    toNumber(firtsN);
-    toNumber(secondN);
-    if (firtsN < secondN) {
+const compare2 = (firtsN, secondN) => {
+    if (+firtsN <= +secondN) {
         console.log(true);
     } else {
         console.log(false);
@@ -31,4 +32,4 @@ myVariable1 = "20";
 myVariable2 = 100;
 
 // Напишите код здесь
-compare(myVariable1, myVariable2);
+compare2(myVariable1, myVariable2);

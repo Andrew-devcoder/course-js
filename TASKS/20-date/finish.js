@@ -14,3 +14,9 @@ const millisecondsNow = Date.now();
 console.log(millisecondsNow);
 
 console.log(Math.PI);
+
+const currentDateInMs = timeNow.getTime();
+console.log(currentDateInMs);
+
+// самая короткая запись
+console.log(Date.now());

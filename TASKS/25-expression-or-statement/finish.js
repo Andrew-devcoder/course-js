@@ -6,25 +6,41 @@
  *  - выражение-инструкция (expression statement)
  */
 
-15; // expression
+15; // expression statement
 
+// statement
 const myObject = {
+    // Object literal is expression
     x: 10,
     y: true,
 };
-// statement
 
-myObject.z = "abc"; // statement
-
-delete myObject.x; // statement
-
-let newVariable; // expression
-
-newVariable = 30 + 5; // statement
-
-console.log(newVariable); // statement
-
-if (newVariable > 10) {
-    console.log(`${newVariable} больше 10`);
-}
 // expression statement
+myObject.z = "abc"; // <-- expression
+
+// expression statement
+delete myObject.x;
+
+// statement
+let newVariable;
+
+// expression statement
+newVariable = 30 + 5; // <-- expression
+
+// expression statement
+console.log(newVariable);
+/**              ^
+ *           expression
+ */
+
+// statement
+if (newVariable > 10) {
+    //     ^
+    //  expression
+
+    // expression statement
+    console.log(`${newVariable} больше 10`); // <-- newVariable is expression
+    //           -------------------------
+    //                      ^
+    //                  expression
+}

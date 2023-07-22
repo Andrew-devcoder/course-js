@@ -14,13 +14,33 @@
  */
 
 const message = () => {
-    const text = "Сообщение номер";
+    const text = "Сообщение номер ";
 
     for (let i = 1; i <= 5; i++) {
         setTimeout(function () {
-            console.log(text + " " + i);
+            console.log(text + i);
         }, 2000 * i);
     }
 };
 
 message();
+
+const arrListN = [];
+
+const addArrListN = () => {
+    for (let i = 1; i <= 5; i++) {
+        arrListN.push(i);
+    }
+};
+
+addArrListN();
+
+arrListN.forEach((el) => {
+    const text = "Сообщение номер ";
+    let newMessage = text + el;
+    setTimeout(function () {
+        console.log(newMessage);
+    }, 2000 * el);
+});
+
+console.log(arrListN);

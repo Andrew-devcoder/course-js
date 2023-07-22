@@ -21,3 +21,10 @@ const remainder = (firstN, secondN) => {
 remainder(myNumber1, myNumber2);
 
 remainder(12, 5);
+
+const remainder2 = (firstN, secondN) => {
+    const result = firstN % secondN;
+    return result;
+};
+
+console.log(remainder2(myNumber1, myNumber2));
