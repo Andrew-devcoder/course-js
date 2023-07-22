@@ -21,3 +21,19 @@ arr.push(4);
 
 console.log(arr);
 // [1, 2, 3, 4]
+
+// не внимательно прочитал задания и решил по другому изменив строку 18
+// а нужно было вот так :
+// let arr = [1, 2] // <-- Объявление переменной используя const
+
+// arr.push(3)
+
+// console.log(arr)
+// // [1, 2, 3]
+
+// arr = [1, 2, 3, 4]
+// // ДО: Uncaught TypeError: Assignment to constant variable.
+// // ПОСЛЕ: Нет ошибки
+
+// console.log(arr)
+// // [1, 2, 3, 4]
