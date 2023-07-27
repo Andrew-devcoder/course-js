@@ -13,8 +13,9 @@
  * "Сообщение номер 5"
  */
 
+// 1
 const message = () => {
-    const text = "Сообщение номер ";
+    const text = "Повідомлення номер ";
 
     for (let i = 1; i <= 5; i++) {
         setTimeout(function () {
@@ -25,6 +26,7 @@ const message = () => {
 
 message();
 
+// 2
 const arrListN = [];
 
 const addArrListN = () => {
@@ -44,3 +46,11 @@ arrListN.forEach((el) => {
 });
 
 console.log(arrListN);
+
+// 3
+let a = 1;
+const messageInterval = setInterval(() => {
+    console.log("Message number " + a);
+    a += 1;
+}, 2000);
+setTimeout(() => clearInterval(messageInterval), 11000);
