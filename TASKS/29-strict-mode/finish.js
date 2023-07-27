@@ -8,7 +8,7 @@
 "use strict";
 
 function myFunction() {
-    let a = 2;
+    const a = 2;
     return a;
 }
 
