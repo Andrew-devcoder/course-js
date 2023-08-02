@@ -11,3 +11,27 @@
  *
  * 4. Выведите результирующий массив в консоль
  */
+
+const carsArray = [];
+
+const cars = {
+    carBrand: "carBrand",
+    price: 123,
+    isAvailableForSale: true,
+};
+
+console.log(cars);
+
+const dreemCars = new Object(cars);
+dreemCars.carBrand = "Supraaa";
+dreemCars.price = 10000;
+console.log(dreemCars);
+
+const newCars = new Object(cars);
+newCars.carBrand = "Toyota";
+newCars.price = 11000;
+console.log(newCars);
+
+carsArray.push(cars, dreemCars, newCars, 123);
+
+console.log(carsArray);
