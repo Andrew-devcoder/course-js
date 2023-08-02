@@ -14,4 +14,6 @@ const myArray = [true, null];
 myArray.unshift("Hello");
 myArray.unshift(100);
 
+console.log(myArray.length);
+
 console.log(myArray); // [100, "Hello", true, null]
