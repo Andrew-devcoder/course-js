@@ -27,9 +27,11 @@ const genRandomNumber = (min, max) => {
 const random = genRandomNumber(MIN, MAX);
 
 const trueFalse = (el) => {
-    let item = toString(el);
+    console.log(el);
+    let item = String(el);
     console.log(typeof item);
-    if (item.length <= 2) {
+    console.log(item);
+    if (item.length <= 4) {
         console.log("true");
         console.log(item.length);
     } else {
