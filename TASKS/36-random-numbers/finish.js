@@ -14,30 +14,39 @@
  *  - для добавления случайного числа в массив с возвратом измененного массива
  */
 
-const MIN = 1000;
-const MAX = 9999;
+let MIN = 1000;
+let MAX = 9999;
+
+// MIN = 10;
+// MAX = 1000;
 
 const myNumbers = [2355, 7235, 8135, 1762, 2361, 8351];
 
 const genRandomNumber = (min, max) => {
-    const result = Math.floor(Math.random() * (max - min + 1) + min);
-    return result;
+    console.log("generation random number");
+    return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-const random = genRandomNumber(MIN, MAX);
+const verification = (el) => {
+    do {
+        el = genRandomNumber(MIN, MAX);
+    } while (String(el).length !== 4);
 
-const trueFalse = (el) => {
-    console.log(el);
-    let item = String(el);
-    console.log(typeof item);
-    console.log(item);
-    if (item.length <= 4) {
-        console.log("true");
-        console.log(item.length);
+    console.log("verification completed");
+    return el;
+};
+
+const lengthTrue = verification();
+
+const checkItem = (item) => {
+    if (!myNumbers.includes(lengthTrue)) {
+        return myNumbers.push(item);
     } else {
-        console.log("false");
-        console.log(item.length);
+        console.log(`array have this item ${item}`);
+        verification();
     }
 };
 
-trueFalse(random);
+checkItem(lengthTrue);
+
+console.log(myNumbers);
