@@ -22,15 +22,29 @@ const cars = {
 
 console.log(cars);
 
-const dreemCars = new Object(cars);
+// const dreemCars = new Object(cars);
+// dreemCars.carBrand = "Supraaa";
+// dreemCars.price = 10000;
+// console.log(dreemCars);
+
+// const newCars = new Object(cars);
+// newCars.carBrand = "Toyota";
+// newCars.price = 11000;
+// console.log(newCars);
+// помилка в тому що я так ссилаюся на один і той самий об'єкт
+// тобто я змінював орігінальний об'єкт
+
+const dreemCars = { ...cars };
 dreemCars.carBrand = "Supraaa";
 dreemCars.price = 10000;
 console.log(dreemCars);
 
-const newCars = new Object(cars);
+const newCars = { ...cars };
 newCars.carBrand = "Toyota";
 newCars.price = 11000;
 console.log(newCars);
+
+//  або можна створити за допомогою Object.assign({}, cars);
 
 carsArray.push(cars, dreemCars, newCars, 123);
 
