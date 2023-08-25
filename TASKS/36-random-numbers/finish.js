@@ -32,7 +32,7 @@ const verification = (el) => {
         el = genRandomNumber(MIN, MAX);
     } while (String(el).length !== 4);
 
-    console.log("verification completed");
+    console.log(`verification completed: ${el}`);
     return el;
 };
 
