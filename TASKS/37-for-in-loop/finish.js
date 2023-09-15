@@ -15,12 +15,12 @@ Object.prototype.country = "England";
 
 for (let key in myObject) {
     if (myObject.hasOwnProperty(key)) {
-        console.log(key + ":" + myObject[key]);
-        // console.log(myObject[key]);
+        // console.log(key + ":" + myObject[key]);
+        console.log(myObject[key]);
     }
 }
 
-console.log(myObject.country);
+// console.log(myObject.country);
 
 const valueToFind = "England";
 let keyFound = null;
@@ -31,7 +31,7 @@ for (const key in myObject) {
         break;
     }
 }
-console.log('Ключ для значення "England":', keyFound);
+console.log(`Ключ для значення '${valueToFind}':`, keyFound);
 // null так і зашилиться бо England є прототипом
 
 // щоб знайти ключ у прототипі Object значення England
@@ -45,7 +45,7 @@ for (const key in Object.prototype) {
     }
 }
 
-console.log('Ключ для значення "England":', keyFound);
+console.log(`Ключ для значення '${valueToFind}':`, keyFound);
 
 // щоб знайти значення до ключа  country
 const keyToFind = "country";
@@ -60,4 +60,4 @@ if (
     valueFound = Object.getPrototypeOf(myObject)[keyToFind];
 }
 
-console.log('Значення за ключем "country":', valueFound);
+console.log(`Значення за ключем '${keyToFind}':`, valueFound);
