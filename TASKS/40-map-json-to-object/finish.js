@@ -21,8 +21,16 @@ const arrObjs = (array) => {
         return JSON.parse(element);
     });
 };
+const arrObjs2 = (array) => {
+    return array.map(JSON.parse);
+};
 
 const newArray = arrObjs(postsJSON);
+const newArray2 = arrObjs2(postsJSON);
 
 console.log(newArray[1].postId);
 console.log(newArray[newArray.length - 1].commentsQuantity);
+
+console.log(
+    `option 2 take number 3th object commentsQuantity: ${newArray2[2].commentsQuantity}`
+);
