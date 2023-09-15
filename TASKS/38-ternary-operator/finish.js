@@ -15,6 +15,13 @@
 //   }
 // }
 
+// function isArrayEmpty(inputArray) {
+//     if (inputArray.length > 0) {
+//         return "Массив не пустой";
+//     }
+//     return "Массив пустой";
+// }
+
 const isArrayEmpty = (inputArray) => {
     return inputArray.length > 0 ? "Массив не пустий" : "Массив пустий";
 };
