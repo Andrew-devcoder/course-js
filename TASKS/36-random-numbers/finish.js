@@ -67,11 +67,15 @@ const genNewArr = (arr, min, max) => {
     if (!newArray.includes(newNumber)) {
         newArray.push(newNumber);
         console.log(`new number ${newNumber}`);
-        console.log(newArray);
     } else {
         console.log(`array have this number ${newNumber} try again...`);
         genNewArr();
     }
+
+    return newArray;
 };
 
-genNewArr(myNumbers, MIN, MAX);
+const addRandomNumbNewArr = genNewArr(myNumbers, MIN, MAX);
+
+console.log(myNumbers);
+console.log(addRandomNumbNewArr);
