@@ -40,10 +40,32 @@ const arraySortInfo = (inputArray) => {
     return message;
 };
 
-console.log(arraySortInfo(a)); // Некоторые элементы не являются числами
-console.log(arraySortInfo(b)); // Массив отсортирован по возрастанию
-console.log(arraySortInfo(c)); // Массив отсортирован по убыванию
-console.log(arraySortInfo(d)); // Массив не отсортирован
+// console.log(arraySortInfo(a)); // Некоторые элементы не являются числами
+// console.log(arraySortInfo(b)); // Массив отсортирован по возрастанию
+// console.log(arraySortInfo(c)); // Массив отсортирован по убыванию
+// console.log(arraySortInfo(d)); // Массив не отсортирован
+
+// version 2
+
+const multiArr = [a, b, c, d];
+
+const arraysSortInfo = (multiArr) => {
+    multiArr.forEach((el) => {
+        if (el.some((item) => typeof item == "string")) {
+            console.log(`this array [${el}] have string element`);
+        } else if (
+            el.every((item, index) => index === 0 || item >= el[index - 1])
+        ) {
+            console.log(`this array [${el}] sort from least to most`);
+        } else if (
+            el.every((item, index) => index === 0 || item <= el[index - 1])
+        ) {
+            console.log(`this array [${el}] sort from most to least`);
+        } else console.log(`this array [${el}] dont have filter`);
+    });
+};
+
+arraysSortInfo(multiArr);
 
 /**
  * ПОДСКАЗКИ
