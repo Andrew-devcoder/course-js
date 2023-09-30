@@ -31,8 +31,23 @@ const areArraysEqual = (firstArray, secondArray) => {
     console.log(`this arrays are similar`);
 };
 
+const areArraysEqual2 = (firstArray, secondArray) => {
+    if (
+        firstArray.length === secondArray.length &&
+        firstArray.every((element, index) => element === secondArray[index])
+    ) {
+        return true;
+    }
+
+    return false;
+};
+
 areArraysEqual(a, b); // true
 areArraysEqual(a, c); // false
 areArraysEqual(a, d); // false
+
+console.log(areArraysEqual2(a, b)); // true
+console.log(areArraysEqual2(a, c)); // false
+console.log(areArraysEqual2(a, d)); // false
 
 // console.log(a === b); // false (Почему?)
