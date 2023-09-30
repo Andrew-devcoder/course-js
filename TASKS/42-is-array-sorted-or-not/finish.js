@@ -65,7 +65,45 @@ const arraysSortInfo = (multiArr) => {
     });
 };
 
-arraysSortInfo(multiArr);
+// arraysSortInfo(multiArr);
+
+// v3
+// first sort arr and before === true or false
+
+const sortedArr = (arr) => {
+    const newArray = [...arr];
+    const sorting = newArray.sort((a, b) => {
+        return a - b;
+    });
+    return sorting;
+};
+
+const checkSort = (arr) => {
+    const newArr = sortedArr(arr);
+
+    if (JSON.stringify(newArr) === JSON.stringify(arr)) {
+        console.log(`${arr} sort from to most`);
+    } else if (
+        JSON.stringify(newArr) === JSON.stringify(arr.slice().reverse())
+    ) {
+        console.log(`${arr} sort from to least`);
+    } else {
+        console.log(`${arr} dont have sort`);
+    }
+};
+
+// and update arraysSortInfo
+const arraysSortInfo2 = (multiArr) => {
+    for (const el of multiArr) {
+        if (el.some((item) => typeof item == "string")) {
+            console.log(`${el} have string elements`);
+        } else {
+            checkSort(el);
+        }
+    }
+};
+
+arraysSortInfo2(multiArr);
 
 /**
  * ПОДСКАЗКИ
