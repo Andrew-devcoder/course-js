@@ -21,6 +21,15 @@ const isElementInArray = (inputArray, searchElement) => {
     }
 };
 
+// includes come back true or false this el have array
+function isElementInArray2(inputArray, searchElement) {
+    return inputArray.includes(searchElement);
+}
+
 console.log(isElementInArray(transports, "Bus")); // true
 console.log(isElementInArray(transports, "Phone")); // false
 console.log(isElementInArray(transports, "Airplane")); // true
+
+console.log(isElementInArray2(transports, "Bus")); // true
+console.log(isElementInArray2(transports, "Phone")); // false
+console.log(isElementInArray2(transports, "Airplane")); // true
