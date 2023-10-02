@@ -24,9 +24,40 @@ const fruits = [
 const primitiveTypesArray = [25, "x", true, undefined, null];
 
 const isElementInArray = (searchElement, inputArray) => {
-    if (Array.isArray(inputArray)) {
-        return `its array `;
+    if (inputArray.every((item) => Array.isArray(item))) {
+        console.log(
+            `Does this array ${JSON.stringify(
+                inputArray
+            )} have such an element-array "${searchElement}"? -`
+        );
+        return inputArray.some(
+            (item) =>
+                item.length === searchElement.length &&
+                item.every((el, index) => el === searchElement[index])
+        );
     }
+
+    if (inputArray.every((item) => typeof item === "object")) {
+        console.log(
+            `Does this array ${JSON.stringify(
+                inputArray
+            )} have such an element-object "${JSON.stringify(
+                searchElement
+            )}"? -`
+        );
+        return inputArray.some((item) => {
+            return JSON.stringify(item) === JSON.stringify(searchElement);
+        });
+    }
+
+    return inputArray.some((item) => {
+        console.log(
+            `Does this array ${JSON.stringify(
+                inputArray
+            )} have such an element "${JSON.stringify(searchElement)}"? -`
+        );
+        return item === searchElement;
+    });
 };
 
 console.log(isElementInArray(["css", "flexbox"], tags)); // true
