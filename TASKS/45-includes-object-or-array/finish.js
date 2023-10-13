@@ -25,11 +25,6 @@ const primitiveTypesArray = [25, "x", true, undefined, null];
 
 const isElementInArray = (searchElement, inputArray) => {
     if (inputArray.every((item) => Array.isArray(item))) {
-        console.log(
-            `Does this array ${JSON.stringify(
-                inputArray
-            )} have such an element-array "${searchElement}"? -`
-        );
         return inputArray.some(
             (item) =>
                 item.length === searchElement.length &&
@@ -38,24 +33,12 @@ const isElementInArray = (searchElement, inputArray) => {
     }
 
     if (inputArray.every((item) => typeof item === "object")) {
-        console.log(
-            `Does this array ${JSON.stringify(
-                inputArray
-            )} have such an element-object "${JSON.stringify(
-                searchElement
-            )}"? -`
-        );
         return inputArray.some((item) => {
             return JSON.stringify(item) === JSON.stringify(searchElement);
         });
     }
 
     return inputArray.some((item) => {
-        console.log(
-            `Does this array ${JSON.stringify(
-                inputArray
-            )} have such an element "${JSON.stringify(searchElement)}"? -`
-        );
         return item === searchElement;
     });
 };
@@ -69,3 +52,17 @@ console.log(isElementInArray({ title: "Apple", quantity: 25 }, fruits)); // true
 console.log(isElementInArray({ title: "Banana" }, fruits)); // false
 
 console.log(isElementInArray(25, primitiveTypesArray)); // true
+
+// цей просто перевірить чи є елемент в масиві тобто на прикладі
+// спрацює для цього завдання
+// console.log(isElementInArray(25, primitiveTypesArray)); // true
+// масив має просіти елементи (ні масиви ні об'єкти)
+// також шукаємо простий елемент 25
+
+// return inputArray.include(searchElement);
+
+// пишемо більш компактно для пошуку інших елементів в масиві
+
+//  return inputArray
+// .map((element) => JSON.stringify(element))
+// .includes(JSON.stringify(searchElement))
