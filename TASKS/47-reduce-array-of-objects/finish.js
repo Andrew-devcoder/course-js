@@ -24,10 +24,21 @@ const inputPosts = [
     },
 ];
 
-const popularPostsIds = (post, minimalComentsQty) => {
+const popularPostsIds1 = (post, minimalComentsQty) => {
     return post
         .filter((el) => el.comments > minimalComentsQty)
         .map((el) => el.postId);
+};
+
+// reduce
+
+const popularPostsIds = (post, minimalComentsQty) => {
+    return post.reduce((accumulator, el) => {
+        if (el.comments > minimalComentsQty) {
+            accumulator.push(el.postId);
+        }
+        return accumulator;
+    }, []);
 };
 
 console.log(popularPostsIds(inputPosts, 10)); // [3421, 8135]
